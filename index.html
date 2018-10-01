@@ -1,46 +1,99 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="script.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <div>
-            <div class = "left">
-                <img src="image.jpg" alt="" style="height:100%;">
-            </div>
-            <div class = "right">
-                <div id="form">
-                    <form onsubmit="return login_action()" name="login" method="POST">
-                        <fieldset>
-                            <legend>로그인</legend>
-                            <input type="text" name="id" placeholder="아이디" required>
-                            <br>
-                            <input type="password" name="password" placeholder="비밀번호" required>
-                            <input type="submit" value="로그인">
-                        </fieldset>
-                    </form>
-            
-                    <br>
-            
-                    <form onsubmit="return register_action()" name="register" method="POST">
-                        <fieldset>
-                            <legend>회원가입</legend>
-                            <input type="text" name="id" placeholder="아이디" required>
-                            <br>
-                            <input type="password" name="password" placeholder="비밀번호" required>
-                            <br>
-                            <input type="text" name="name" placeholder="이름" required>
-                            <input type="submit" value="회원가입">
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        
 
-    </body>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        * {
+            font-family: 'GonganR', Courier, monospace
+        }
+
+        ul.topnav {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            font-family: 'GonganM', Courier, monospace;
+            list-style-type: none;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            vertical-align: middle;
+        }
+
+        ul.topnav li.title {
+            color: white;
+            font-size: 30px;
+        }
+
+        ul.topnav li {
+            position: relative;
+        }
+
+        ul.topnav li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            opacity: 1;
+            transition: opacity .2s ease-out;
+            -moz-transition: opacity .2s ease-out;
+            -webkit-transition: opacity .2s ease-out;
+            -o-transition: opacity .2s ease-out;
+        }
+
+        ul.topnav li a:hover {
+            opacity: 0.6;
+            transition: opacity .2s ease-out;
+            -moz-transition: opacity .2s ease-out;
+            -webkit-transition: opacity .2s ease-out;
+            -o-transition: opacity .2s ease-out;
+        }
+
+        ul.topnav li.right {
+            left: 0;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            ul.topnav li.right,
+            ul.topnav li {
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1>디디캠프</h1>
+        <ul class="topnav">
+            <li><a href="#home">탐색</a></li>
+            <li><a href="#news">만들기</a></li>
+            <li class="right"><a href="#register">회원가입</a></li>
+            <li class="right"><a href="#login">로그인</a></li>
+
+        </ul>
+    </nav>
+
+
+
+
+    <div style="padding:0 16px;">
+        <h2>디디캠프에서 만날 수 있는 재미난 경험들</h2>
+        <p>This example use media queries to stack the topnav vertically when the screen size is 600px or less.</p>
+        <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+        <h4>Resize the browser window to see the effect.</h4>
+        <p>디디캠프다 임마들아 하하하하하하ㅏ</p>
+    </div>
+
+</body>
+
 </html>
